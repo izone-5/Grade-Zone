@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import Style from './Signup.module.scss'
+import Style from './Signup.scss'
 import '../../mockApi/MockApi'
 import { getProfileData } from '../../redux/authSlice';
 
