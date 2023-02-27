@@ -2,17 +2,15 @@ import React,{useState} from 'react'
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import './Signup.scss'
+import Style from './Signup.module.scss'
 import '../../mockApi/MockApi'
 import { getProfileData } from '../../redux/authSlice';
 
 
 export const Signup = () => {
    
-
-    
   return (
-     <div className='loginInputwrapper'>
+     <div className={Style.signin}>
         <h2>Create account</h2>
         <h5>Enter your details below </h5>
         <form >

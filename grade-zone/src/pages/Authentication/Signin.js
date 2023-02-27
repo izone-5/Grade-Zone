@@ -1,9 +1,13 @@
-import React from 'react'
+import './Signin.scss'
 
 export const Signin = () => {
+
   return(
-        <div className='loginInputwrapper'>
-            <p>hello world</p>
+        <div className='signin' >
+            <div className='container'>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     )
 }
