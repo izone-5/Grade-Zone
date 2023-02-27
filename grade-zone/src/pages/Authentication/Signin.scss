@@ -8,8 +8,8 @@
     .container{
         width: 800px;
         height: 500px;
-        // border: var(--border);
         display: flex;
+        border-radius: 5px;
        
         .outer{
             display: flex;
@@ -21,6 +21,9 @@
 
             img{
                 width: 100%;
+                overflow: hidden;
+                // border: var(--border);
+                // object-fit: cover;
             }
 
             .inner{
