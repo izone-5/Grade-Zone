@@ -1,6 +1,7 @@
 import './Signin.scss'
 import 'remixicon/fonts/remixicon.css'
 import banner from '../../assets/user.png'
+import { Link } from 'react-router-dom'
 
 export const Signin = () => {
 
@@ -12,12 +13,12 @@ export const Signin = () => {
                         <p className='welcome'>Welcome Back</p>
                         <h3>Login your account</h3>
                         <ul>
-                            <li><i className="ri-lock-line"></i><input autoComplete='off' type='password' name='password' /></li>
-                            <li><i className="ri-mail-line"></i><input autoComplete='off' type='email' name='email' /></li>
+                            <li><i className="ri-lock-line"></i><input autoComplete='off' type='text' name='password' /></li>
+                            <li><i className="ri-mail-line"></i><input autoComplete='off' type='text' name='email' /></li>
                             <li><a>Forgotten password?</a></li>
                         </ul>
                         <button>Continue</button>
-                        <p>New Member?  <a>Register here</a></p>
+                        <p>New Member?  <Link to='/signup'>Register here</Link></p>
                     </div>
                 </div>
 
