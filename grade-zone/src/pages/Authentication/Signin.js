@@ -13,8 +13,8 @@ export const Signin = () => {
                         <p className='welcome'>Welcome Back</p>
                         <h3>Login your account</h3>
                         <ul>
-                            <li><i className="ri-lock-line"></i><input autoComplete='off' type='text' name='password' /></li>
-                            <li><i className="ri-mail-line"></i><input autoComplete='off' type='text' name='email' /></li>
+                            <li><i className="ri-lock-line"></i><input autoComplete='off' type='text' name='password' placeholder='Password' /></li>
+                            <li><i className="ri-mail-line"></i><input autoComplete='off' type='text' name='email' placeholder='Email'/></li>
                             <li><a>Forgotten password?</a></li>
                         </ul>
                         <button>Continue</button>
