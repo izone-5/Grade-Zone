@@ -5,14 +5,28 @@ import db from './MockApi.json'
 
 const mock = new MockAdapter(axios)
 console.log(db)
-mock.onPost('/users').reply(({url,data}) => {
+mock.onPost('/signup').reply(({url,data}) => {
     const newUser = JSON.parse(data)
   const  user = db.profileData.find(user => user.email === newUser.email)
   if (!user){
    db.profileData.push(newUser)
-   return[200,db.profileData]
+   return[200, db.profileData]
   }
   return[200, "User already exist"]
     
     
 })
+mock.onPost('/signin').reply(({url,data}) => {
+    const newUser = JSON.parse(data)
+  const  user = db.profileData.find(user => user.email === newUser.email)
+  if (user) {
+  return[200, user]
+  }
+  return[200, "Please signup"]   
+})
+// mock.onGet(/\/users\/[^/]+/).reply(function (config) {
+//   // the actual id can be grabbed from config.url
+//   const { email } = config.url.match(/\/users\/(?<email>[^/]+)/).groups;
+//   const user = db.profiledata.find(user =>user.email == email)
+//   return [200, user];
+// });
