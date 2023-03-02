@@ -20,17 +20,22 @@ const initialValues = {
 
 }
 export const Signup = () => {
-
+   
  const {values, handleBlur, handleChange, handleSubmit, handleReset,errors, touched} = useFormik({
       initialValues,
       validationSchema:signupSchema,
       onSubmit: async (values) => {
-       const {data} = await axios.post('/users', values )
-       console.log(data)
+       const {data} = await axios.post('/signup', values )
+       console.log(values.email)
+      
+       
          handleReset()
+         
       }
+
    })
-console.log(touched)
+   
+
   return (
    <div className='signup' >
       <div className='container'>
