@@ -1,11 +1,11 @@
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
-import db from './MockApi.json'
+import db from './db.json'
 
 
 const mock = new MockAdapter(axios)
-console.log(db)
-mock.onPost('/users').reply(({url,data}) => {
+
+mock.onPost('/users').reply(({url, data}) => {
     const newUser = JSON.parse(data)
   const  user = db.profileData.find(user => user.email === newUser.email)
   if (!user){

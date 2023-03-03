@@ -1,3 +1,4 @@
+$red: red;
 .signup{
   height: 100vh;
   width: 100vw;
@@ -44,7 +45,13 @@
                   div{
                     border-bottom: 1px solid var(--secondary-dark-color);
                     flex-basis: 48%;
-                    background-color: transparent;
+                    position: relative;
+                    span{
+                      display: block;
+                      position: absolute;
+                      top: 100%;
+                      color: var(--danger-color);
+                    }
                     input{
                       width: 100%;
                       outline: none;

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './Signup.scss'
-import '../../mockApi/MockApi'
+import '../../mockApi/api'
 import { getProfileData } from '../../redux/authSlice';
 import banner from '../../assets/user.png'
 import { Link } from 'react-router-dom'
@@ -21,7 +21,7 @@ const initialValues = {
 }
 export const Signup = () => {
 
- const {values, handleBlur, handleChange, handleSubmit, handleReset,errors, touched} = useFormik({
+ const {values, handleBlur, handleChange, handleSubmit, handleReset, errors, touched} = useFormik({
       initialValues,
       validationSchema:signupSchema,
       onSubmit: async (values) => {
@@ -30,7 +30,7 @@ export const Signup = () => {
          handleReset()
       }
    })
-console.log(touched)
+
   return (
    <div className='signup' >
       <div className='container'>
@@ -51,16 +51,18 @@ console.log(touched)
                   <form onSubmit={handleSubmit}>
                      <ul>
                         <li>
-                           <div><input autoComplete='off' type='text' name='name' placeholder='Full Name' value={values.name} onBlur={handleBlur} onChange={handleChange} />
-                            <div className='error_container'>
-                              {errors.name &&  touched.name && <p className='form_error'>{errors.name}</p>}
-                           </div>
+                           <div>
+                              <input autoComplete='off' type='text' name='name' placeholder='Full Name' value={values.name} onBlur={handleBlur} onChange={handleChange} />
+                              <span className='error_container'>
+                                 {errors.name &&  touched.name && <p className='form_error'>{errors.name}</p>}
+                              </span>
                            </div>
                           
-                           <div><input autoComplete='off' type='text' name='email' placeholder='Email' value={values.email} onBlur={handleBlur} onChange={handleChange}  />
-                           <div className='error_container'>
-                              {errors.email &&  touched.email && <p className='form_error'>{errors.email}</p>}
-                           </div>
+                           <div>
+                              <input autoComplete='off' type='text' name='email' placeholder='Email' value={values.email} onBlur={handleBlur} onChange={handleChange}  />
+                              <span className='error_container'>
+                                 {errors.email &&  touched.email && <p className='form_error'>{errors.email}</p>}
+                              </span>
                            </div>
                            
                         </li>
@@ -80,17 +82,18 @@ console.log(touched)
                            </select>
                         </li>
                         <li>
-                           <div><input autoComplete='off' type='text' name='password' placeholder='Password' value={values.password} onBlur={handleBlur} onChange={handleChange}  />
-                           <div className='error_container'>
-                              {errors.password &&  touched.password && <p className='form_error'>{errors.password}</p>}
-                           </div>
-
+                           <div>
+                              <input autoComplete='off' type='text' name='password' placeholder='Password' value={values.password} onBlur={handleBlur} onChange={handleChange}  />
+                              <span className='error_container'>
+                                 {errors.password &&  touched.password && <p className='form_error'>{errors.password}</p>}
+                              </span>
                            </div>
                            
-                           <div><input autoComplete='off' type='text' name='cpassword' placeholder='Confirm Password' value={values.cpassword} onBlur={handleBlur} onChange={handleChange} />
-                           <div className='error_container'>
-                              {errors.cpassword &&  touched.cpassword && <p className='form_error'>{errors.cpassword}</p>}
-                           </div>
+                           <div>
+                              <input autoComplete='off' type='text' name='cpassword' placeholder='Confirm Password' value={values.cpassword} onBlur={handleBlur} onChange={handleChange} />
+                              <span className='error_container'>
+                                 {errors.cpassword &&  touched.cpassword && <p className='form_error'>{errors.cpassword}</p>}
+                              </span>
                            </div>
                            
                         </li>
@@ -99,9 +102,7 @@ console.log(touched)
                   </form>
                  
             </div>
-         </div>
-
-         
+         </div>  
       </div>
    </div>
   
