@@ -2,7 +2,6 @@ import './Signin.scss'
 import 'remixicon/fonts/remixicon.css'
 import banner from '../../assets/user.png'
 import { Link } from 'react-router-dom'
-import { signupSchema } from '../../schemas';
 import {useFormik} from 'formik';
 import axios from 'axios';
 import '../../mockApi/api'
