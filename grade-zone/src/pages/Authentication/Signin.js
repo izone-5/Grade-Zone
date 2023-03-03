@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 import { signupSchema } from '../../schemas';
 import {useFormik} from 'formik';
 import axios from 'axios';
-import '../../mockApi/MockApi'
+
+import '../../mockApi/api'
 
 export const Signin = () => {
     const initialValues = {
@@ -32,11 +33,19 @@ export const Signin = () => {
                         <h3>Login your account</h3>
                         <form onSubmit={handleSubmit}>
                          <ul>
+                    
+                            <li>
+                                <i className="ri-lock-line"></i>
+                                <input autoComplete='off' type='text' name='password' value={values.password} onBlur={handleBlur} onChange={handleChange}  />
+                            </li>
+                            <li>
+                                <i className="ri-mail-line"></i>
+                                 <input autoComplete='off' type='text' name='email' value={values.email} onBlur={handleBlur} onChange={handleChange} />
+                            </li>
+                            <li>
+                                <a>Forgotten password?</a>
+                            </li>
                         
-                           <li><input autoComplete='off' type='text' name='password' placeholder='Password' value={values.password} onBlur={handleBlur} onChange={handleChange}  /></li>
-
-                           <li><input autoComplete='off' type='text' name='email' placeholder='Email' value={values.email} onBlur={handleBlur} onChange={handleChange}  /></li>
-                           
                         </ul>
                         <button type='submit'>Continue</button>
                         </form>

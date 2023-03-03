@@ -19,7 +19,7 @@ mock.onPost('/signup').reply(({url,data}) => {
 })
 mock.onPost('/signin').reply(({url,data}) => {
     const newUser = JSON.parse(data)
-  const  user = db.profileData.find(user => user.email === newUser.email)
+  const  user = db.profileData.find(user => user.email === newUser.email && user.password == newUser.password)
   if (user) {
   return[200, user]
   }
