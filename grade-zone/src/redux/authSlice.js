@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import '../mockApi/MockApi'
+import '../mockApi/api'
 
 export const getProfileData = createAsyncThunk(
     'auth/getProfileDataByEmail',
