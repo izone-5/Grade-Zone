@@ -8,6 +8,7 @@ import PrivateRoutes from './pages/Protected';
 import AppPages from './pages/AppPages';
 import Homepage from './pages/Homepage/Homepage';
 import NoPage from './pages/Nopage';
+import Authentication from './pages/Authentication/Authentication';
 
 
 
@@ -22,10 +23,12 @@ const App = () => {
           <Routes>
               <Route path="/" element={<Signin/>}/>
               <Route path="/signup" element={<Signup/>}/>
-              <Route element={<PrivateRoutes access={false} />}>
+              <Route element={<PrivateRoutes access={true} />}>
                 <Route element={<AppPages />}>
                     <Route path="homepage" element={<Homepage />} />
                     <Route path="*" element={<NoPage />} />
+                     <Route path="auth" element={<Authentication />} />
+                    
                 </Route>
               </Route>
           </Routes>
