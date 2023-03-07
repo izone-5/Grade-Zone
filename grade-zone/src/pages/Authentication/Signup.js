@@ -20,8 +20,7 @@ const initialValues = {
 
 }
 export const Signup = () => {
-   
- const {values, handleBlur, handleChange, handleSubmit, handleReset,errors, touched} = useFormik({
+ const {values, handleBlur, handleChange, handleSubmit, handleReset, errors, touched} = useFormik({
       initialValues,
       validationSchema:signupSchema,
       onSubmit: async (values) => {
@@ -57,47 +56,44 @@ export const Signup = () => {
                         <li>
                            <div>
                               <input autoComplete='off' type='text' name='name' placeholder='Full Name' value={values.name} onBlur={handleBlur} onChange={handleChange} />
-                              <span className='error_container'>
-                                 {errors.name &&  touched.name && <p className='form_error'>{errors.name}</p>}
-                              </span>
+                              {errors.name &&  touched.name && <p className='form_error'>{errors.name}</p>}
                            </div>
-                          
-                           <div>
-                              <input autoComplete='off' type='text' name='email' placeholder='Email' value={values.email} onBlur={handleBlur} onChange={handleChange}  />
-                              <span className='error_container'>
-                                 {errors.email &&  touched.email && <p className='form_error'>{errors.email}</p>}
-                              </span>
-                           </div>
-                           
                         </li>
                         <li>
-                           <label htmlFor="occupation">Occupation:</label>
-                           <select name="occupation" id="occupation" value={values.occupation} onBlur={handleBlur} onChange={handleChange} >
-                              <option></option>
-                              <option value="worker">Worker</option>
-                              <option value="professional">Professional</option>
-                           </select>
+                           <div>
+                              <input autoComplete='off' type='text' name='email' placeholder='Email' value={values.email} onBlur={handleBlur} onChange={handleChange}  />
+                              {errors.email &&  touched.email && <p className='form_error'>{errors.email}</p>}
+                           </div>
+                        </li>
+                        <li>
+
+                           <div>
+                              <select name="occupation" id="occupation" value={values.occupation} onBlur={handleBlur} onChange={handleChange} >
+                                 <option>--Occupation--</option>
+                                 <option value="worker">Worker</option>
+                                 <option value="professional">Professional</option>
+                              </select>
+                              {errors.occupation &&  touched.occupation && <p className='form_error'>{errors.occupation}</p>}
+                           </div>
                            
-                           <label htmlFor="gender">Gender:</label>
-                           <select name="gender" id="gender" value={values.gender} onBlur={handleBlur} onChange={handleChange} >
-                              <option></option>
-                              <option value="male">Male</option>
-                              <option value="female">Female</option>
-                           </select>
+                           <div>
+                              <select name="gender" id="gender" value={values.gender} onBlur={handleBlur} onChange={handleChange} >
+                                 <option>--Gender--</option>
+                                 <option value="male">Male</option>
+                                 <option value="female">Female</option>
+                              </select>
+                              {errors.gender &&  touched.gender && <p className='form_error'>{errors.gender}</p>}
+                           </div>
                         </li>
                         <li>
                            <div>
                               <input autoComplete='off' type='text' name='password' placeholder='Password' value={values.password} onBlur={handleBlur} onChange={handleChange}  />
-                              <span className='error_container'>
-                                 {errors.password &&  touched.password && <p className='form_error'>{errors.password}</p>}
-                              </span>
+                              {errors.password &&  touched.password && <p className='form_error'>{errors.password}</p>}
                            </div>
                            
                            <div>
                               <input autoComplete='off' type='text' name='cpassword' placeholder='Confirm Password' value={values.cpassword} onBlur={handleBlur} onChange={handleChange} />
-                              <span className='error_container'>
-                                 {errors.cpassword &&  touched.cpassword && <p className='form_error'>{errors.cpassword}</p>}
-                              </span>
+                              {errors.cpassword &&  touched.cpassword && <p className='form_error'>{errors.cpassword}</p>}
                            </div>
                            
                         </li>

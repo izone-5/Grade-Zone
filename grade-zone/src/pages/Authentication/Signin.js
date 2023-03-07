@@ -13,14 +13,11 @@ export const Signin = () => {
 }
  const {values, handleBlur, handleChange, handleSubmit, handleReset} = useFormik({
       initialValues,
-      
       onSubmit: async (values) => {
        const {data} = await axios.post('/signin', values )
        console.log(data)
          handleReset()
-         
       }
-
    })
   return(
         <div className='signin' >
