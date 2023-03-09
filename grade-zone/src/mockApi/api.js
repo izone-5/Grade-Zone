@@ -5,7 +5,6 @@ import db from './db.json'
 
 const mock = new MockAdapter(axios)
 
-console.log(db)
 mock.onPost('/signup').reply(({url,data}) => {
     const newUser = JSON.parse(data)
   const  user = db.profileData.find(user => user.email === newUser.email)
