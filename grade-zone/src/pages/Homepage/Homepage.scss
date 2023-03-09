@@ -1,0 +1,189 @@
+.homepage{
+    width: 90rem;
+    nav{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+   height: 5rem;
+   & > img{
+    margin-right: 10%;
+    width: 17%;
+    height: 3rem;
+    margin-top: 10px;
+   }
+   .notification{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    i{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .fa-home{
+        color: white;
+    }
+    img{
+        width: 1.5rem;
+        height: 1.5rem;
+         margin-top: 2rem;
+    }
+   }
+   .username{
+    display: flex;
+    width: 12rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 2rem;
+    & > img{
+    margin-right: 15%;
+    width: 25%;
+    height: 3rem;
+    margin-top: 10px;
+
+   }
+  & :nth-child(1){
+    color: white;
+    margin-top: 1.2rem;
+    
+   }
+   & :last-child{
+    color: white;
+   position: relative;
+   bottom: 1.2rem;
+    
+   }
+    
+   }
+
+}
+.main-container{
+    width: 30%;
+    margin: auto;
+    .users{
+
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        background-color:white;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 2rem;
+        height: 6rem;
+       
+      img{
+        width: 4rem;
+        height: 4rem;
+        margin-top:.9rem;
+      }
+    }
+    .posts{
+        
+        display: flex;
+        flex-direction: column;
+        background-color:white;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 1rem;
+        height: 7rem;
+        .new-post{
+            display: flex;
+           gap: 10px;
+           margin-top:1rem ;
+           margin-left: 0.3rem;
+           width: 100%;
+            img{
+               
+                width: 7%;
+                height: 2rem;
+                margin-left:2rem ;
+            }
+            input{
+                width: 16rem;
+                height: 3rem;
+                border: var(--border);
+                border-radius: .3rem;
+                background-color: var( --secondary-light-color);
+                
+            }
+            & ::placeholder{
+                   padding-left: 1rem;
+                   font-size: 1rem;
+                }
+        }
+       .icon{
+        margin-left:4rem ;
+        margin-top: .5rem;
+        img{
+            width: 1.2rem;
+            margin: .25rem;
+        }
+    } 
+    }
+    .post-container{
+        margin-top: 1rem;
+            background-color:white;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+            .user-post{
+                    display: flex;
+                    width: 50%;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    margin-bottom: 2rem;
+                   
+                img{
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 100%;
+                     margin-top: .8rem;
+                    }
+                    h4{
+                       margin-top: .8rem; 
+                    }
+                    p{
+                        margin-left: 3.5rem;
+                    }
+    }
+    }
+    .desc-container{
+          display: flex;
+          flex-direction: column;
+         .desc{
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            span{
+                color: var(--primary-color);
+            }
+         }
+         .user-des{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            img{
+                width: 10rem;
+                
+            }
+         }
+         .react{
+            display: flex;
+            gap: 1rem;
+            margin:2rem ;
+            i{
+                color:var(--primary-color) ;
+            }
+         }
+         .reactions{
+            display: flex;
+            justify-content: space-between;
+            &  :nth-child(1){
+              padding: 1rem;
+
+            }
+            i{
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+            
+         }
+    }
+   
+}
+}

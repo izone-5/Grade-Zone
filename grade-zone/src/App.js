@@ -9,6 +9,7 @@ import AppPages from './pages/AppPages';
 import Homepage from './pages/Homepage/Homepage';
 import NoPage from './pages/Nopage';
 import Authentication from './pages/Authentication/Authentication';
+import Profile from './pages/profilepage/Profile';
 
 
 
@@ -28,7 +29,9 @@ const App = () => {
                     <Route path="homepage" element={<Homepage />} />
                     <Route path="*" element={<NoPage />} />
                     <Route path="auth" element={<Authentication />} />
-                </Route>
+                    <Route path="prof" element={<Profile />} />
+                  
+               </Route>
               </Route>
           </Routes>
         </BrowserRouter> 
