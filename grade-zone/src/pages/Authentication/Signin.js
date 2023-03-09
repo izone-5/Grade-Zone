@@ -16,7 +16,7 @@ export const Signin = () => {
    const onSubmit = async (values, actions) => {
     const {data} = await axios.post('/signin', values )
       actions.resetForm()
-      navigate('homepage')
+      navigate('/homepage')
       console.log(data)
 
    }
@@ -27,8 +27,8 @@ export const Signin = () => {
                     <div className='inner'>
                         <p className='welcome'>Welcome Back</p>
                         <h3>Login your account</h3>
-                        <Formik initialValues={initialValues}>
-                            <Form onSubmit={onSubmit}>
+                        <Formik initialValues={initialValues} onSubmit={onSubmit}>
+                            <Form >
                                 <ul>
                                     
                                     <li>

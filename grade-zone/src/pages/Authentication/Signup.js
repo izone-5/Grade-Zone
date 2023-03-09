@@ -9,6 +9,7 @@ import banner from "../../assets/user.png";
 import { Link } from "react-router-dom";
 import { signupSchema } from "../../schemas";
 
+
 const initialValues = {
   name: "",
   email: "",
@@ -18,9 +19,11 @@ const initialValues = {
   cpassword: "",
 };
 export const Signup = () => {
+  const navigate=useNavigate()
   const onSubmit = async (values, actions) => {
     const { data } = await axios.post("/signup", values);
     actions.resetForm();
+    navigate("/prof")
     console.log(values);
   };
 

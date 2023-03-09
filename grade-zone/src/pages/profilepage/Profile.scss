@@ -1,0 +1,91 @@
+.container{
+    width: 70rem;
+  nav{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+   height: 5rem;
+    img{
+        margin-right: 10%;
+        width: 17%;
+        height: 3rem;
+        margin-top: 10px;
+    }
+    i{
+        color: white;
+       margin-left: 4rem;
+       margin-top: 2rem;
+    }
+  }
+  .profile-container{
+    width: 90%;
+    margin-top: 1.5rem;
+    
+    margin-left: 3rem;
+    .main-profile{
+        width: 100%;
+       img{
+        width: 95%;
+      border-top-left-radius: 2rem;
+     border-top-right-radius: 2rem;
+        
+       }
+    }
+    .minor{
+       position: relative;
+       bottom: 7rem;
+    
+       img{
+       width: 15rem;
+       margin-left: 2rem;
+       }
+       p{
+       width: 3rem;
+       height: 3rem;
+       border-radius: 100%;
+       background-color: var( --secondary-dark-color);
+       position: relative;
+       left: 12.5rem;
+       bottom: 3.5rem;
+     
+    
+       i{
+          padding-top: 1rem;
+          padding-left: 1rem;
+       }
+       }
+       
+    }
+    .minor-profile{
+       width:60% ;
+       position: relative;
+      left: 17.7rem;
+      bottom: 17rem;
+      
+       .name{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        h3{
+            font-size: 1.3rem;
+        }
+        & p:last-child{
+           border: var(--border);
+           width: 6rem;
+     
+           border-radius: .3rem;
+             text-align: center;
+        }
+       }
+       .help{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        i{
+            color: var(--primary-color);
+        }
+       }
+
+    }
+  }
+}
